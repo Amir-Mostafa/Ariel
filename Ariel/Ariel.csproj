@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29929CCC-2043-4B79-BC73-0D471EDC43AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ariel</RootNamespace>
+    <AssemblyName>Ariel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\buy_orders.cs" />
+    <Compile Include="BL\car.cs" />
+    <Compile Include="BL\car_virtually.cs" />
+    <Compile Include="BL\emplyees.cs" />
+    <Compile Include="BL\returned_class.cs" />
+    <Compile Include="BL\validation.cs" />
+    <Compile Include="PL\add_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\add_employee.Designer.cs">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\add_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\add_product.Designer.cs">
+      <DependentUpon>add_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\all_mony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\all_mony.Designer.cs">
+      <DependentUpon>all_mony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car_supplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car_supplies.Designer.cs">
+      <DependentUpon>car_supplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car_supplies_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car_supplies_date.Designer.cs">
+      <DependentUpon>car_supplies_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\costs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\costs.Designer.cs">
+      <DependentUpon>costs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\form_notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\form_notifications.Designer.cs">
+      <DependentUpon>form_notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\free_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\free_products.Designer.cs">
+      <DependentUpon>free_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\gifts_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\gifts_date.Designer.cs">
+      <DependentUpon>gifts_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\mony_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\mony_form.Designer.cs">
+      <DependentUpon>mony_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\products.cs" />
+    <Compile Include="BL\sell_order.cs" />
+    <Compile Include="ButtonZ.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="PL\all_buy_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\all_buy_order.Designer.cs">
+      <DependentUpon>all_buy_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\all_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\all_order.Designer.cs">
+      <DependentUpon>all_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\all_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\all_reports.Designer.cs">
+      <DependentUpon>all_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\buy_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\buy_order.Designer.cs">
+      <DependentUpon>buy_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car.Designer.cs">
+      <DependentUpon>car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car_date.Designer.cs">
+      <DependentUpon>car_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car_now.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car_now.Designer.cs">
+      <DependentUpon>car_now.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\car_sell_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\car_sell_report.Designer.cs">
+      <DependentUpon>car_sell_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\copy_system.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\copy_system.Designer.cs">
+      <DependentUpon>copy_system.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\form_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\form_config.Designer.cs">
+      <DependentUpon>form_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\mony.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\mony.Designer.cs">
+      <DependentUpon>mony.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\new_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\new_form.Designer.cs">
+      <DependentUpon>new_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\new_month.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\new_month.Designer.cs">
+      <DependentUpon>new_month.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\notifications.Designer.cs">
+      <DependentUpon>notifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\notifications_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\notifications_date.Designer.cs">
+      <DependentUpon>notifications_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\orders_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\orders_form.Designer.cs">
+      <DependentUpon>orders_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\outgoings_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\outgoings_report.Designer.cs">
+      <DependentUpon>outgoings_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\pdf_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\pdf_date.Designer.cs">
+      <DependentUpon>pdf_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\pdf_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\pdf_report.Designer.cs">
+      <DependentUpon>pdf_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\products.Designer.cs">
+      <DependentUpon>products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\products_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\products_report.Designer.cs">
+      <DependentUpon>products_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\products_repor_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\products_repor_date.Designer.cs">
+      <DependentUpon>products_repor_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\product_in_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\product_in_date.Designer.cs">
+      <DependentUpon>product_in_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\repors_sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\repors_sell.Designer.cs">
+      <DependentUpon>repors_sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\reports.Designer.cs">
+      <DependentUpon>reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\report_sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\report_sell.Designer.cs">
+      <DependentUpon>report_sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\restore_backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\restore_backup.Designer.cs">
+      <DependentUpon>restore_backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\returned.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\returned.Designer.cs">
+      <DependentUpon>returned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\sells_car_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\sells_car_product.Designer.cs">
+      <DependentUpon>sells_car_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\single product report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\single product report.Designer.cs">
+      <DependentUpon>single product report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\single_product_inc_car.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\single_product_inc_car.Designer.cs">
+      <DependentUpon>single_product_inc_car.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\take_path.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\take_path.Designer.cs">
+      <DependentUpon>take_path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\update_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\update_product.Designer.cs">
+      <DependentUpon>update_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\user_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\user_data.Designer.cs">
+      <DependentUpon>user_data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\virtually.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\virtually.Designer.cs">
+      <DependentUpon>virtually.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="report\car_order.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>car_order.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\form_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\form_report.Designer.cs">
+      <DependentUpon>form_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\gifts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gifts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\rpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="PL\add_employee.resx">
+      <DependentUpon>add_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\add_product.resx">
+      <DependentUpon>add_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\all_mony.resx">
+      <DependentUpon>all_mony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car_supplies.resx">
+      <DependentUpon>car_supplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car_supplies_date.resx">
+      <DependentUpon>car_supplies_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\costs.resx">
+      <DependentUpon>costs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\form_notifications.resx">
+      <DependentUpon>form_notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\free_products.resx">
+      <DependentUpon>free_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\gifts_date.resx">
+      <DependentUpon>gifts_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\mony_form.resx">
+      <DependentUpon>mony_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\all_buy_order.resx">
+      <DependentUpon>all_buy_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\all_order.resx">
+      <DependentUpon>all_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\all_reports.resx">
+      <DependentUpon>all_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\buy_order.resx">
+      <DependentUpon>buy_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car.resx">
+      <DependentUpon>car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car_date.resx">
+      <DependentUpon>car_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car_now.resx">
+      <DependentUpon>car_now.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\car_sell_report.resx">
+      <DependentUpon>car_sell_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\copy_system.resx">
+      <DependentUpon>copy_system.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\form_config.resx">
+      <DependentUpon>form_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\mony.resx">
+      <DependentUpon>mony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\new_form.resx">
+      <DependentUpon>new_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\new_month.resx">
+      <DependentUpon>new_month.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\notifications.resx">
+      <DependentUpon>notifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\notifications_date.resx">
+      <DependentUpon>notifications_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\orders_form.resx">
+      <DependentUpon>orders_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\outgoings_report.resx">
+      <DependentUpon>outgoings_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\pdf_date.resx">
+      <DependentUpon>pdf_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\pdf_report.resx">
+      <DependentUpon>pdf_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\products.resx">
+      <DependentUpon>products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\products_report.resx">
+      <DependentUpon>products_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\products_repor_date.resx">
+      <DependentUpon>products_repor_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\product_in_date.resx">
+      <DependentUpon>product_in_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\repors_sell.resx">
+      <DependentUpon>repors_sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\reports.resx">
+      <DependentUpon>reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\report_sell.resx">
+      <DependentUpon>report_sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\restore_backup.resx">
+      <DependentUpon>restore_backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\returned.resx">
+      <DependentUpon>returned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\sells_car_product.resx">
+      <DependentUpon>sells_car_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\single product report.resx">
+      <DependentUpon>single product report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\single_product_inc_car.resx">
+      <DependentUpon>single_product_inc_car.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\take_path.resx">
+      <DependentUpon>take_path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\update_product.resx">
+      <DependentUpon>update_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\user_data.resx">
+      <DependentUpon>user_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\virtually.resx">
+      <DependentUpon>virtually.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report\car_order.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>car_order.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\form_report.resx">
+      <DependentUpon>form_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\gifts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gifts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon 1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ariel-laundry-detergent-washing-omo-detergent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foursquare-check-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shipment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insurance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\criss-cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\criss-cross %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-download %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\criss-cross %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\direct-download %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\criss-cross %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new %282%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\criss-cross %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1554034483-04fda0d3507b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ws_Windows_8_M3_2560x1600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
