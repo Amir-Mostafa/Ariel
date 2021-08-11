@@ -26,7 +26,12 @@ namespace Ariel.PL
         {
            
             InitializeComponent();
-            
+            comboBox2.Items.Add("الكل");
+            comboBox2.Items.Add("سياره 1");
+            comboBox2.Items.Add("سياره 2");
+            comboBox2.Items.Add("سياره 3");
+            comboBox2.Items.Add("المحل");
+
             try
             {
 
@@ -592,7 +597,23 @@ namespace Ariel.PL
             }
         }
 
+        public void compobox_back_color()
+        {
+            if (car_name.Text == "المحل")
+            {
+                car_name.BackColor = Color.Red;
+            }
+            else if (car_name.Text == "سياره 2")
+            {
+                car_name.BackColor = Color.Green;
 
+            }
+
+            else
+            {
+                car_name.BackColor = Color.White;
+            }
+        }
         public bool test_amount_postponed(double x)
         {
             double amount = 0;
@@ -778,7 +799,7 @@ namespace Ariel.PL
                 {
                     //update first part 
 
-                    bl.update_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue));
+                    bl.update_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue),disc.Text);
 
                     //update second part
 
@@ -931,11 +952,13 @@ namespace Ariel.PL
                             }
                         }
                     }
+                    //total.Text = total_order.ToString();
+                    //bl.update_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue));
                 }
                 else
                 {
                     //save header of order
-                    bl.add_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue));
+                    bl.add_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue),disc.Text);
 
 
                     //add second part of car order
@@ -1018,7 +1041,8 @@ namespace Ariel.PL
                     
 
                 }
-                total.Text = total_order.ToString();
+                
+                //bl.update_car_order(int.Parse(order_id.Text), total.Text, date.Value.Date, total_gifs.Text, total_pdf.Text, total_baka.Text, Convert.ToInt32(car_name.SelectedValue));
             }
             catch (Exception ex)
             {
@@ -1196,12 +1220,18 @@ namespace Ariel.PL
                     x--;
                     d1 = bl.car_order_by_id(x);
                     d2 = bl.car_operation_arabic(x);
+
+                    if (comboBox2.Text == "" || comboBox2.Text == "الكل")
+                    { }
+                    else if (d1.Rows[0]["clint_name"].ToString() != comboBox2.Text)
+                        goto f;
                     order_id.Text = d1.Rows[0]["order_id"].ToString();
                     date.Value = DateTime.Parse(d1.Rows[0]["time"].ToString());
                     total.Text = d1.Rows[0]["total"].ToString();
                     total_gifs.Text = d1.Rows[0]["total_free"].ToString();
                     total_pdf.Text = d1.Rows[0]["total_pdf"].ToString();
                     total_baka.Text = d1.Rows[0]["total_baka"].ToString();
+                    disc.Text = d1.Rows[0]["disc"].ToString();
                     car_name.SelectedValue = Convert.ToInt32(d1.Rows[0]["car_id"].ToString());
                     dataGridView2.DataSource = d2;
                     g = d2;
@@ -1240,12 +1270,17 @@ namespace Ariel.PL
                     d2 = bl.car_operation_arabic(x);
 
 
+                    if (comboBox2.Text == "" || comboBox2.Text == "الكل")
+                    { }
+                    else if (d1.Rows[0]["clint_name"].ToString() != comboBox2.Text)
+                        goto f;
                     order_id.Text = d1.Rows[0]["order_id"].ToString();
                     date.Value = DateTime.Parse(d1.Rows[0]["time"].ToString());
                     total.Text = d1.Rows[0]["total"].ToString();
                     total_gifs.Text = d1.Rows[0]["total_free"].ToString();
                     total_pdf.Text = d1.Rows[0]["total_pdf"].ToString();
                     total_baka.Text = d1.Rows[0]["total_baka"].ToString();
+                    disc.Text = d1.Rows[0]["disc"].ToString();
                     car_name.SelectedValue = Convert.ToInt32(d1.Rows[0]["car_id"].ToString());
                     dataGridView2.DataSource = d2;
                     g = d2;
@@ -1521,6 +1556,7 @@ namespace Ariel.PL
         {
             //save_free_product();
             //save_order();
+            compobox_back_color();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -1627,6 +1663,36 @@ namespace Ariel.PL
 
 
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+                double tot = 0;
+                for (int i = 0; i < dataGridView2.Rows.Count - 1; i++)
+                {
+                    int product_id = int.Parse(dataGridView2.Rows[i].Cells[0].Value.ToString());
+                    double amount = double.Parse(dataGridView2.Rows[i].Cells[2].Value.ToString());
+
+                    DataTable dt = b.select_product_by_id(product_id);
+                    double price = 0;
+                    if (dt.Rows[0]["price"].ToString() != "")
+                    {
+                        price = double.Parse(dt.Rows[0]["price"].ToString());
+                    }
+                    tot += price * amount;
+                    //   MessageBox.Show(price.ToString());
+                }
+                //total.Text = tot.ToString();
+                //save_order();
+                MessageBox.Show(tot.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dataGridView2_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)

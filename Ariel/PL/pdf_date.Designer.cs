@@ -57,6 +57,7 @@
             this.date2.Name = "date2";
             this.date2.Size = new System.Drawing.Size(498, 38);
             this.date2.TabIndex = 128;
+            this.date2.ValueChanged += new System.EventHandler(this.date2_ValueChanged);
             // 
             // date1
             // 
@@ -65,6 +66,7 @@
             this.date1.Name = "date1";
             this.date1.Size = new System.Drawing.Size(498, 38);
             this.date1.TabIndex = 127;
+            this.date1.ValueChanged += new System.EventHandler(this.date1_ValueChanged);
             // 
             // label2
             // 
@@ -75,6 +77,7 @@
             this.label2.Size = new System.Drawing.Size(47, 29);
             this.label2.TabIndex = 126;
             this.label2.Text = "الي:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -85,6 +88,7 @@
             this.label1.Size = new System.Drawing.Size(51, 29);
             this.label1.TabIndex = 125;
             this.label1.Text = "من :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // comboBox1
             // 

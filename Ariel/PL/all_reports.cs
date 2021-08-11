@@ -142,5 +142,11 @@ namespace Ariel.PL
             Form f = new car_supplies_date();
             f.Show();
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            disc_date f = new disc_date();
+            f.Show();
+        }
     }
 }

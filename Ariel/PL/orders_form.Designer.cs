@@ -61,6 +61,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
@@ -170,6 +171,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.nums);
             this.groupBox1.Controls.Add(this.العدد);
             this.groupBox1.Controls.Add(this.total);
@@ -183,7 +185,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Location = new System.Drawing.Point(236, 169);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1131, 183);
+            this.groupBox1.Size = new System.Drawing.Size(1131, 202);
             this.groupBox1.TabIndex = 94;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "بيانات الفاتوره";
@@ -460,6 +462,21 @@
             this.comboBox2.TabIndex = 108;
             this.comboBox2.ValueMember = "clint_id";
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = global::Ariel.Properties.Resources.accounting;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(591, 124);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(70, 73);
+            this.button4.TabIndex = 108;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // orders_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -535,5 +552,6 @@
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.Button button4;
     }
 }

@@ -966,5 +966,34 @@ namespace Ariel.PL
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+
+            {
+                double tot = 0;
+                for(int i=0;i<dataGridView2.Rows.Count-1;i++)
+                {
+                    int product_id = int.Parse(dataGridView2.Rows[i].Cells[0].Value.ToString());
+                    double amount = double.Parse(dataGridView2.Rows[i].Cells[2].Value.ToString());
+
+                    DataTable dt = b.select_product_by_id(product_id);
+                    double price = 0;
+                    if(dt.Rows[0]["price"].ToString()!="")
+                    {
+                        price = double.Parse(dt.Rows[0]["price"].ToString());
+                    }
+                    tot += price * amount;
+                    
+                }
+                total.Text = tot.ToString();
+                save_order();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

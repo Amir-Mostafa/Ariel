@@ -30,6 +30,7 @@
         {
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
@@ -69,6 +70,22 @@
             this.button10.Text = "مبيعات صنف في العربيه";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.Black;
+            this.button15.Image = global::Ariel.Properties.Resources.insurance;
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.Location = new System.Drawing.Point(54, 549);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(222, 128);
+            this.button15.TabIndex = 111;
+            this.button15.Text = "الخصومات";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -265,6 +282,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 689);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
@@ -302,5 +320,6 @@
         public System.Windows.Forms.Button button12;
         public System.Windows.Forms.Button button13;
         public System.Windows.Forms.Button button14;
+        public System.Windows.Forms.Button button15;
     }
 }

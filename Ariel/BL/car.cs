@@ -11,10 +11,10 @@ namespace Ariel.BL
     class car
     {
         DAL.DataAccesLier DAL = new DAL.DataAccesLier();
-        public void add_car_order(int id, string total, DateTime time, string total_free, string total_pdf, string total_baka, int car_id)
+        public void add_car_order(int id, string total, DateTime time, string total_free, string total_pdf, string total_baka, int car_id,string disc)
         {
             DAL.DataAccesLier DAL = new DAL.DataAccesLier();
-            SqlParameter[] param = new SqlParameter[7];
+            SqlParameter[] param = new SqlParameter[8];
             param[0] = new SqlParameter("@order_id", SqlDbType.Int);
             param[0].Value = id;
             param[1] = new SqlParameter("@total", SqlDbType.NVarChar, 20);
@@ -30,6 +30,9 @@ namespace Ariel.BL
             param[5].Value = total_baka;
             param[6] = new SqlParameter("@car_id", SqlDbType.Int);
             param[6].Value = car_id;
+
+            param[7] = new SqlParameter("@disc", SqlDbType.NVarChar, 50);
+            param[7].Value = disc;
             DAL.open();
             DAL.executenonquery("add_car_order", param);
             DAL.close();
@@ -98,10 +101,10 @@ namespace Ariel.BL
             DAL.executenonquery("update_in_car3", param);
             DAL.close();
         }
-        public void update_car_order(int id, string total, DateTime time,string total_free,string total_pdf,string total_baka,int car_id)
+        public void update_car_order(int id, string total, DateTime time,string total_free,string total_pdf,string total_baka,int car_id,string disc)
         {
             DAL.DataAccesLier DAL = new DAL.DataAccesLier();
-            SqlParameter[] param = new SqlParameter[7];
+            SqlParameter[] param = new SqlParameter[8];
             param[0] = new SqlParameter("@order_id", SqlDbType.Int);
             param[0].Value = id;
             param[1] = new SqlParameter("@total", SqlDbType.NVarChar, 20);
@@ -116,6 +119,9 @@ namespace Ariel.BL
             param[5].Value = total_baka;
             param[6] = new SqlParameter("@car_id", SqlDbType.Int);
             param[6].Value = car_id;
+            param[7] = new SqlParameter("@disc", SqlDbType.NVarChar,50);
+            param[7].Value = disc;
+
             DAL.open();
             DAL.executenonquery("update_car_order", param);
             DAL.close();
@@ -294,6 +300,15 @@ namespace Ariel.BL
             return DAL.selectdata("pdf_in_date", param);
         }
 
+        public DataTable all_disc(DateTime date1, DateTime date2)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@from", SqlDbType.DateTime);
+            param[0].Value = date1;
+            param[1] = new SqlParameter("@to", SqlDbType.DateTime);
+            param[1].Value = date2;
+            return DAL.selectdata("disc_in_date", param);
+        }
 
     }
 }

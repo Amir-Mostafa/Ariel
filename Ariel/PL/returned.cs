@@ -124,7 +124,7 @@ namespace Ariel.PL
 
                         int p = int.Parse(textBox2.Text);
                         double calc = (p / (double)c_num) + int.Parse(textBox16.Text);
-                        MessageBox.Show(calc.ToString());
+                        ///MessageBox.Show(calc.ToString());
                         if (!test_amount(calc))
                         {
                             MessageBox.Show("الكميه لا تكفي");
@@ -695,5 +695,9 @@ namespace Ariel.PL
             }
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -79,6 +79,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.disc = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -475,7 +478,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.LimeGreen;
             this.button5.Image = global::Ariel.Properties.Resources.next__1_;
-            this.button5.Location = new System.Drawing.Point(1503, 54);
+            this.button5.Location = new System.Drawing.Point(1521, 62);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(169, 91);
             this.button5.TabIndex = 116;
@@ -490,7 +493,7 @@
             this.button4.ForeColor = System.Drawing.Color.LimeGreen;
             this.button4.Image = global::Ariel.Properties.Resources.direct_download__2_;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(372, 64);
+            this.button4.Location = new System.Drawing.Point(309, 64);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(20);
             this.button4.Size = new System.Drawing.Size(197, 91);
@@ -506,7 +509,7 @@
             this.button3.ForeColor = System.Drawing.Color.LimeGreen;
             this.button3.Image = global::Ariel.Properties.Resources.criss_cross__1_;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(606, 64);
+            this.button3.Location = new System.Drawing.Point(500, 64);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(20);
             this.button3.Size = new System.Drawing.Size(204, 91);
@@ -522,7 +525,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.LimeGreen;
             this.button2.Image = global::Ariel.Properties.Resources.previous__1_;
-            this.button2.Location = new System.Drawing.Point(1328, 54);
+            this.button2.Location = new System.Drawing.Point(1356, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 91);
             this.button2.TabIndex = 113;
@@ -552,7 +555,7 @@
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Image = global::Ariel.Properties.Resources.printer;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(841, 64);
+            this.button6.Location = new System.Drawing.Point(697, 64);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(20);
             this.button6.Size = new System.Drawing.Size(195, 91);
@@ -569,7 +572,7 @@
             this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Image = global::Ariel.Properties.Resources.printer;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(1051, 64);
+            this.button7.Location = new System.Drawing.Point(888, 64);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(20);
             this.button7.Size = new System.Drawing.Size(228, 91);
@@ -672,12 +675,51 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(571, 272);
+            this.label23.Location = new System.Drawing.Point(633, 270);
             this.label23.Name = "label23";
             this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label23.Size = new System.Drawing.Size(163, 32);
+            this.label23.Size = new System.Drawing.Size(100, 32);
             this.label23.TabIndex = 149;
-            this.label23.Text = " : خصم مؤقت ";
+            this.label23.Text = " : خصم ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DisplayMember = "clint_name";
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(1133, 116);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(194, 37);
+            this.comboBox2.TabIndex = 152;
+            this.comboBox2.ValueMember = "clint_id";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Montserrat Subrayada", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(1171, 62);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(124, 34);
+            this.label24.TabIndex = 151;
+            this.label24.Text = "فاتورة بيع ";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Image = global::Ariel.Properties.Resources.accounting;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(1696, 62);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(86, 91);
+            this.button8.TabIndex = 153;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // car
             // 
@@ -686,6 +728,9 @@
             this.BackgroundImage = global::Ariel.Properties.Resources.photo_1554034483_04fda0d3507b;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1850, 903);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.disc);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -802,5 +847,8 @@
         public System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox disc;
         private System.Windows.Forms.Label label23;
+        public System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label24;
+        public System.Windows.Forms.Button button8;
     }
 }

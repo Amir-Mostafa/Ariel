@@ -88,3 +88,5 @@ C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Re
 C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Release\Ariel.PL.virtually.resources
 C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Release\Ariel.PL.car_supplies.resources
 C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Release\Ariel.PL.car_supplies_date.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Release\Ariel.PL.disc_date.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Release\Ariel.PL.disc_report.resources

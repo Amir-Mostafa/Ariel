@@ -64,3 +64,10 @@ C:\Users\mosta\OneDrive\documents\visual studio 2013\Projects\Ariel\Ariel\obj\De
 C:\Users\mosta\OneDrive\documents\visual studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.pdb
 C:\Users\mosta\OneDrive\documents\visual studio 2013\Projects\Ariel\Ariel\bin\Debug\Ariel.pdb
 C:\Users\mosta\OneDrive\documents\visual studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.csprojResolveAssemblyReference.cache
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.car_supplies.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.car_supplies_date.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.pdf_date.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.pdf_report.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.virtually.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.disc_date.resources
+C:\Users\mosta\OneDrive\Documents\Visual Studio 2013\Projects\Ariel\Ariel\obj\Debug\Ariel.PL.disc_report.resources

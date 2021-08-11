@@ -147,6 +147,18 @@
     <Compile Include="PL\costs.Designer.cs">
       <DependentUpon>costs.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\disc_date.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\disc_date.Designer.cs">
+      <DependentUpon>disc_date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\disc_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\disc_report.Designer.cs">
+      <DependentUpon>disc_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +465,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\costs.resx">
       <DependentUpon>costs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\disc_date.resx">
+      <DependentUpon>disc_date.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\disc_report.resx">
+      <DependentUpon>disc_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
